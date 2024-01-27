@@ -1,0 +1,31 @@
+<p>
+Ma premiere page web
+</p>
+
+<p>
+    <img src="chat.jpg" alt="photo d'un chat" />
+</p>
+<p>
+    <button onclick="changeParagraphe()">mon bouton</button>
+</p>
+
+<p id="para2">
+Ma deuxieme ligne
+</p>
+
+<script>
+    function maFunction(){
+        console.log('Coucou Nico');
+    }
+
+    function changeParagraphe(){
+        var maVariable = document.getElementById("para2");
+        var estPareil = maVariable.innerText == "Ma deuxieme ligne"
+        console.log(estPareil)
+        if(estPareil){
+            maVariable.innerText = "Coucou Nico"
+        } else {
+            maVariable.innerText = "Ma deuxieme ligne"
+        }
+    }
+</script>
